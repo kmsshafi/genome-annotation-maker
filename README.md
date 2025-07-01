@@ -1,4 +1,4 @@
-# 🧬 Generic Genome Annotation Pipeline Using MAKER
+# 🧬 Genome Annotation Pipeline Using MAKER
 
 This repository provides a modular and reproducible workflow for eukaryotic genome annotation using [MAKER](http://www.yandell-lab.org/software/maker.html). It integrates tools like RepeatModeler, RepeatMasker, SNAP, Augustus, and BUSCO to identify genes and annotate features.
 
@@ -32,7 +32,7 @@ conda activate maker_env
 
 2. Place your genome and evidence files in `data/`.
 
-3. Follow the steps in [GENOME_ANNOTATION.md](./GENOME_ANNOTATION.md) to run the pipeline.
+3. Follow the steps in [GENOME_ANNOTATION.md](https://gist.github.com/kmsshafi/def2d1184e15a5b865471a08c44aa8e3) to run the pipeline.
 
 ## 🧪 Sample Data
 
