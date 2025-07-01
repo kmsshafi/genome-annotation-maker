@@ -12,15 +12,39 @@ This repository provides a modular and reproducible workflow for eukaryotic geno
 
 ## 🚀 Quickstart
 
-1. Clone this repository and install dependencies:
-```bash
-conda create -n maker_env maker=3.01.03 -c bioconda
-conda activate maker_env
-```
+1. **Clone the repository and set up the environment**:
+   ```bash
+   git clone https://github.com/yourusername/genome-annotation-maker.git
+   cd genome-annotation-maker
 
-2. Place your genome and evidence files in `data/`.
+   conda create -n maker_env maker=3.01.03 -c bioconda
+   conda activate maker_env
+   conda install repeatmodeler repeatmasker busco bedtools seqtk seqkit datamash
+   ```
 
-3. Follow the steps in [GENOME_ANNOTATION.md](https://gist.github.com/kmsshafi/def2d1184e15a5b865471a08c44aa8e3) to run the pipeline.
+2. **Place your input files** into a new `data/` directory:
+   ```
+   mkdir data
+   cp path/to/genome.fasta data/
+   cp path/to/proteins.fasta data/
+   cp path/to/transcripts.fasta data/
+   cp path/to/te_proteins.fasta data/
+   ```   
+
+4. **Follow the pipeline steps** in [GENOME_ANNOTATION.md](https://gist.github.com/kmsshafi/def2d1184e15a5b865471a08c44aa8e3)
+
+5. **Expected output structure** (generated after running the pipeline):
+   ```
+   .
+   ├── data/                       # Input genome, proteins, transcripts
+   ├── 01_simple/, ..., 05_full/  # RepeatMasker outputs
+   ├── round1.maker.output/       # MAKER round 1
+   ├── round2.maker.output/       # MAKER round 2
+   ├── snap/                      # SNAP training output
+   ├── logs/                      # Log files from various steps
+   ├── README.md
+   └── .gitignore
+   ```
 
 ## 📜 License & Acknowledgments
 
