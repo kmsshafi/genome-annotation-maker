@@ -1,0 +1,38 @@
+# System/Editor files
+.DS_Store
+*.swp
+.vscode/
+.idea/
+
+# Logs and temporary
+*.log
+*.tmp
+.cache/
+*.bak
+
+# Conda/Virtual environments
+.env/
+*.env
+*.conda
+
+# Output data files
+*.fasta
+*.fa
+*.fastq
+*.bam
+*.sam
+*.gff
+*.gff3
+*.masked
+*.out
+*.align
+*.cat.gz
+
+# MAKER-specific files
+*.maker.output/
+*.datastore_index.log
+theVoid/
+round*/ # Output from maker runs
+
+# Sample/Test data
+sample_data/
